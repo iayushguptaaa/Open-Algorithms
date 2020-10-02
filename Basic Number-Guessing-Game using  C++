@@ -1,0 +1,41 @@
+/* 
+The player guesses a number to from 2 to 19 and then program generates 3 random numbers from101-199.If the um of digits of any 
+these number matches the player's  number then player wins the game else loose the game.
+*/
+
+#include<iostream.h>
+#include<conio.h>
+#include<stdlib.h>
+void main()
+{  clrscr();
+   int u=199,l=101,r1,r2,r3,x,a,a[3],b[3],c[3],p,q,r;
+   cout<<"\n Choose any number between 2 to 19:";
+   cin>>x;
+   randomize();
+   r1=random(u-l+1)+1;
+   r2=random(u-l+1)+1;
+   r3=random(u-l+1)+1;
+   cout<<"\n Numbers are : <<r1<<r2<<r3;
+   a[1]=r1/100;
+   a[2]=(r1%100)/10;
+   a[3]=(r1%100)%10;
+   b[1]=r2/100;
+   b[2]=(r2%100)/10;
+   b[3]=(r2%100)%10;
+   c[1]=r3/100;
+   c[2]=(r3%100)/10;
+   c[3]=(r3%100)%10;
+   p=a[1]+a[2]+a[3];
+   q=b[1]+b[2]+b[3];
+   r=c[1]+c[2]+c[3];
+   cout<<"\n Sum of digits of 1st no ="<<p;
+   cout<<"\n Sum of digits of 2nd no ="<<q;
+   cout<<"\n Sum of digits of 3rd no ="<<r;
+   if(p==x || q==x || r==x)
+   cout<<"\n YOU WIN ";
+   else
+   cout<<"\n YOU LOSE";
+   getch();}
+   
+   
+   
